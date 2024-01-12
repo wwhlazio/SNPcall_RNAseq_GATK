@@ -1,4 +1,2 @@
 # SNPcall_RNAseq_GATK
-implement_rnaseq_snpcall_gatk3.py is teh final pipeline. comparing with gatk4 and found that RNAseq with 2 step alignment performs much better.
-run single sample snpcall first and genotype together performs better
-R code is used to select the best cut off based on comparing with DNA genotype
+The goal of this project is to build GATK RNAseq SNP call pipeline for Nonalcoholic steatohepatitis (NASH) project. We only have RNAseq data and want to check the genotype information such as single nucleotide variation. Since the quality of RNAseq is not the best to call genomic variant. The goal is to call high quality SNV. I downloaded the RNAseq data for normal liver tissue from GTEx and use the genotype data as golden standard data to tuning the pipeline and parametes. Based on reference search and experiment, I found GATK3 wich use 2 pass alignment of STAR performs better than GATK4. implement_rnaseq_snpcall_gatk3.py is pipeline. I also found that run single sample snv call first and genotype together performs better. The R code is used to select the best cut off based on comparing with DNA genotypes.
